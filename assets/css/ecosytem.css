@@ -297,14 +297,11 @@ ul {
     max-height: 500px; 
 }
 
-/*
-*** THAY ĐỔI THEO YÊU CẦU: NỀN XANH, CHỮ TRẮNG, NÚT HÀI HÒA ***
-*/
 .content-inner {
     padding: 30px;
     border-top: 1px solid var(--primary-blue);
-    background-color: var(--primary-blue); /* Nền màu xanh dương */
-    color: var(--text-light); /* Chữ màu sáng/trắng */
+    background-color: var(--primary-blue);
+    color: var(--text-light);
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
@@ -330,24 +327,23 @@ ul {
     position: absolute;
     left: 0;
     top: 2px;
-    color: var(--text-light); /* Đổi màu icon cho hợp nền xanh */
+    color: var(--text-light);
 }
 
-/* Style cho nút "Xem Thêm" bên trong */
 .btn-tertiary {
     display: inline-block;
     margin-top: 20px;
     font-weight: 600;
-    border: 2px solid var(--bg-white); /* Viền trắng */
+    border: 2px solid var(--bg-white);
     padding: 8px 20px;
     border-radius: 50px;
-    background-color: var(--bg-white); /* Nền trắng */
-    color: var(--primary-blue); /* Chữ màu xanh */
+    background-color: var(--bg-white);
+    color: var(--primary-blue);
     transition: all 0.3s ease;
 }
 .btn-tertiary:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Nền hơi trong suốt khi hover */
-    color: var(--text-light); /* Chữ trắng khi hover */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: var(--text-light);
     border-color: var(--text-light);
 }
 
@@ -540,5 +536,54 @@ ul {
         top: 20px;
         right: 20px;
         order: 3;
+    }
+}
+
+/*
+*** BỔ SUNG RESPONSIVE CHO MÀN HÌNH RẤT NHỎ (DƯỚI 480px) ***
+*/
+@media (max-width: 480px) {
+    /* Header */
+    .logo img {
+        height: 40px; /* Thu nhỏ logo hơn nữa */
+    }
+
+    /* Hero Section */
+    .hero {
+        height: 60vh; /* Giảm chiều cao */
+    }
+    .hero-title {
+        font-size: 2rem; /* Thu nhỏ tiêu đề chính */
+        margin-top: 60px;
+    }
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    /* Các khu vực chung */
+    .section-padding {
+        padding: 60px 0;
+    }
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    /* Accordion */
+    .accordion-header {
+        padding: 15px;
+    }
+    .header-title {
+        font-size: 1.1rem;
+    }
+
+    /* Footer */
+    .footer-col h4 {
+        font-size: 1rem;
+    }
+    .footer {
+        font-size: 0.9rem;
     }
 }
