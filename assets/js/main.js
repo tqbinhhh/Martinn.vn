@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         particlesJS("particles-js", {
             // Cấu hình cho các "hạt" (particles)
             "particles": {
-                "number": { "value": 40 },          // Số lượng hạt.
+                "number": { "value": 48 },          // Số lượng hạt.
                 "color": { "value": "#ffffff" },    // Màu sắc của hạt.
                 "opacity": { "value": 0.3 },        // Độ trong suốt của hạt.
                 "size": { "value": 2 },             // Kích thước của hạt.
