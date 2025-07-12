@@ -1,0 +1,267 @@
+/* --- Cài đặt chung & Font chữ --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --header-height: 80px; /* Định nghĩa chiều cao header để dễ quản lý */
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #0042d1;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* --- HIỆU ỨNG NỀN PARTICLE NETWORK --- */
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #0042d1;
+    background-image: linear-gradient(to bottom right, #2a5270, #1e3e57);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === HEADER === */
+.header {
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    transition: all 0.4s ease;
+    background-color: #fff;
+}
+
+.top-bar {
+    background-color: #1a3a6e;
+    color: white;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.top-bar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-bar-info {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top-bar-info span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.main-nav {
+    padding: 10px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    display: block;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    padding: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #0042d1;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1002; /* Đảm bảo nút hamburger luôn ở trên */
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+}
+
+/* --- Nội dung chính (Menu Lục giác) --- */
+.main-content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* ... Các CSS khác giữ nguyên ... */
+.hexagon-menu { position: relative; width: 700px; height: 500px; display: flex; justify-content: center; align-items: center; }
+.hexagon-item { position: absolute; text-align: center; width: 160px; transition: all 0.3s ease; transform: translate(-50%, -50%); }
+.hexagon-item:hover { transform: translate(-50%, -50%) scale(1.05); }
+.hexagon-item .icon { width: 110px; height: 110px; border-radius: 50%; margin: 0 auto 15px auto; cursor: pointer; display: flex; justify-content: center; align-items: center; background-color: #fff; border: 5px solid #e9ecef; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 0 0 2px #0042d1; }
+.hexagon-item .icon img { width: 80%; height: 80%; object-fit: contain; }
+.center-item .icon { width: 120px; height: 120px; background: transparent; border: 4px solid white; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); border-radius: 50%; overflow: hidden; }
+.center-item .icon img { object-fit: cover; width: 100%; height: 100%; }
+.hexagon-item p { font-weight: bold; font-size: 14px; text-transform: uppercase; }
+.center-item { top: 50%; left: 50%; }
+.item-2 { top: 0; left: 50%; }
+.item-3 { top: 35%; left: 98%; }
+.item-4 { top: 90%; left: 80%; }
+.item-5 { top: 90%; left: 20%; }
+.item-6 { top: 35%; left: 2%; }
+.main-footer { background-color: rgba(0, 0, 0, 0.3); border-top: 1px solid rgba(255, 255, 255, 0.1); padding: 40px 0 30px 0; font-size: 14px; position: relative; z-index: 10; }
+.main-footer .container { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+.footer-col { flex: 1; min-width: 200px; }
+.footer-col h4 { font-size: 16px; margin-top: 0; margin-bottom: 20px; text-transform: uppercase; }
+.footer-col p, .footer-col li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; }
+.footer-col a { color: #a9dff3; transition: color 0.3s; }
+.footer-col a:hover { color: white; }
+.footer-col i { width: 15px; padding-top: 3px; }
+.lang-switcher { display: inline-flex; align-items: center; gap: 5px; border: 1px solid white; padding: 5px 10px; margin-top: 10px; font-size: 12px; cursor: pointer; }
+.footer-copyright { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.15); color: rgba(255, 255, 255, 0.7); font-size: 13px; font-weight: 400; }
+.footer-copyright p { margin: 0; padding: 0; }
+.fixed-sidebar { position: fixed; top: 50%; left: 15px; transform: translateY(-50%); display: flex; flex-direction: column; gap: 15px; z-index: 1001; }
+.sidebar-icon { width: 50px; height: 50px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 24px; color: white; cursor: pointer; border: none; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.sidebar-icon:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
+.messenger-icon { background: linear-gradient(45deg, #006AFF, #00C6FF); animation: pulse 2s infinite; }
+.phone-container { position: relative; }
+.phone-icon { background: linear-gradient(45deg, #28a745, #20c997); }
+.phone-popup { position: absolute; left: 115%; top: 50%; transform: translateY(-50%); background-color: #343a40; color: white; padding: 8px 15px; border-radius: 6px; font-size: 14px; font-weight: 500; white-space: nowrap; box-shadow: 0 4px 10px rgba(0,0,0,0.2); visibility: hidden; opacity: 0; transition: opacity 0.3s ease, visibility 0.3s ease; }
+.phone-popup::before { content: ''; position: absolute; top: 50%; right: 100%; transform: translateY(-50%); border-width: 6px; border-style: solid; border-color: transparent #343a40 transparent transparent; }
+.phone-popup.active { visibility: visible; opacity: 1; }
+
+/* === KEYFRAMES === */
+@keyframes pulse { 0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 198, 255, 0.7); } 70% { transform: scale(1); box-shadow: 0 0 0 15px rgba(0, 198, 255, 0); } 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 198, 255, 0); } }
+@keyframes slideDown { from { transform: translateY(-100%); } to { transform: translateY(0); } }
+
+
+/* === RESPONSIVE === */
+@media (max-width: 1200px) {
+  .hexagon-menu { width: 100%; height: auto; position: static; padding: 40px 0; display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; gap: 40px 20px; }
+  .hexagon-item { position: static; transform: none !important; width: 45%; margin-bottom: 0; transition: none !important; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+  .center-item { width: 100%; }
+  .main-content { padding: 40px 20px 60px 20px; }
+}
+
+@media (max-width: 768px) {
+    .header.sticky { position: fixed; top: 0; left: 0; animation: slideDown 0.5s ease-out; }
+    .header.sticky .top-bar { display: none; }
+    .fixed-sidebar { display: flex; left: auto; right: 15px; top: auto; bottom: 20px; transform: none; }
+    .phone-popup { left: auto; right: 115%; }
+    .phone-popup::before { right: -12px; left: auto; border-color: transparent transparent transparent #343a40; }
+    .top-bar-info { flex-direction: column; gap: 10px; text-align: center; }
+
+    /*
+    *** CSS CHO MENU THẢ XUỐNG TỪ TRÊN CÙNG ***
+    */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(26, 58, 110, 0.98);
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+        transform: translateY(-100%);
+        transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1), visibility 0.5s;
+        visibility: hidden;
+    }
+    
+    .nav-menu.active {
+        transform: translateY(0);
+        visibility: visible;
+    }
+
+    .nav-menu li {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .nav-menu.active li {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .nav-menu.active li:nth-child(1) { transition-delay: 0.20s; }
+    .nav-menu.active li:nth-child(2) { transition-delay: 0.25s; }
+    .nav-menu.active li:nth-child(3) { transition-delay: 0.30s; }
+    .nav-menu.active li:nth-child(4) { transition-delay: 0.35s; }
+    
+    .nav-link {
+        font-size: 1.5rem; /* Điều chỉnh lại cỡ chữ cho phù hợp */
+        color: white;
+    }
+    
+    .hamburger { display: block; }
+
+    /* Animation cho nút hamburger thành dấu X */
+    .hamburger.active .bar {
+        background-color: white; /* Đổi màu gạch thành trắng khi menu mở */
+    }
+    .hamburger.active .bar:nth-child(2) { opacity: 0; }
+    .hamburger.active .bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .hamburger.active .bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .main-footer .container { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .main-navigation-bar .logo img { height: 50px; }
+    .main-content { padding: 40px 15px 60px 15px; }
+    .hexagon-item { width: 90%; }
+    .hexagon-item .icon { width: 90px; height: 90px; }
+    .hexagon-item p { font-size: 12px; }
+    .center-item .icon { width: 100px; height: 100px; }
+    .top-bar { font-size: 11px; }
+    .sidebar-icon { width: 45px; height: 45px; font-size: 20px; }
+    .lang-switcher { margin: 10px auto 0; }
+}
