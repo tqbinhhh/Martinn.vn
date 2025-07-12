@@ -1,10 +1,6 @@
 /* --- Cài đặt chung & Font chữ --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-:root {
-    --header-height: 80px;
-}
-
 body {
     margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
@@ -48,7 +44,6 @@ ul {
     z-index: 100;
     width: 100%;
     background-color: #fff;
-    transition: all 0.4s ease;
 }
 
 .top-bar {
@@ -83,6 +78,7 @@ ul {
     padding: 10px 0;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    width: 100%;
 }
 
 .main-nav .container {
@@ -135,8 +131,8 @@ ul {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - 200px);
-    padding: 96px 20px;
-    padding-bottom: 78px;
+    padding: 112px 20px;
+    padding-bottom: 50px;
 }
 
 .hexagon-menu {
@@ -386,6 +382,7 @@ ul {
     opacity: 1;
 }
 
+
 /* === KEYFRAMES === */
 @keyframes pulse {
     0% {
@@ -451,13 +448,12 @@ ul {
 
 @media (max-width: 768px) {
 
-    /* *** CSS CHO STICKY MAIN-NAV *** */
-    .main-nav.sticky {
+    /* *** CSS CHO HIỆU ỨNG STICKY CỦA MAIN-NAV *** */
+    .main-nav.main-nav-sticky {
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
-        animation: slideDown 0.3s ease-out;
+        animation: slideDown 0.4s ease-out;
     }
 
     .fixed-sidebar {
