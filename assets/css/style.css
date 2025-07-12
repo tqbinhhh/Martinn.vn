@@ -448,7 +448,6 @@ ul {
 
 @media (max-width: 768px) {
 
-    /* *** CSS CHO HIỆU ỨNG STICKY CỦA MAIN-NAV *** */
     .main-nav.main-nav-sticky {
         position: fixed;
         top: 0;
@@ -588,5 +587,24 @@ ul {
 
     .lang-switcher {
         margin: 10px auto 0;
+    }
+
+    /*
+    *** CSS MỚI CHO TOP BAR TRÊN MOBILE RẤT NHỎ ***
+    */
+    .top-bar {
+        padding: 10px 0;
+    }
+
+    .top-bar-info {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start; /* Căn lề trái */
+        padding: 0 15px; /* Thêm padding ngang */
+        font-size: 11px;
+    }
+
+    .top-bar-info span {
+        width: 100%; /* Cho mỗi mục chiếm toàn bộ chiều rộng */
     }
 }
